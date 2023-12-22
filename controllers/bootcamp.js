@@ -15,7 +15,7 @@ exports.getBootcamps = (req, res, next) => {
 exports.getBootcamp = (req, res, next) => {
   res.status(200).json({
     success: true,
-    msg: `Dispaly a single bootcamp ${req.params.id} `,
+    msg: `Dispaly bootcamp ${req.params.id} `,
   });
 };
 
@@ -34,7 +34,7 @@ exports.createBootcamp = (req, res, next) => {
 exports.updateBootcamp = (req, res, next) => {
   res
     .status(200)
-    .json({ success: true, msg: `Update a single bootcamp ${req.params.id} ` });
+    .json({ success: true, msg: `Update bootcamp ${req.params.id} ` });
 };
 
 // @Desc       Delete Bootcamp
@@ -44,5 +44,5 @@ exports.updateBootcamp = (req, res, next) => {
 exports.deleteBootcamp = (req, res, next) => {
   res
     .status(200)
-    .json({ success: true, msg: `Delete a single bootcamp ${req.params.id} ` });
+    .json({ success: true, msg: `Delete bootcamp ${req.params.id} ` });
 };

@@ -3,13 +3,15 @@ const dotenv = require("dotenv");
 // Require the routes
 const bootcamp = require("./routes/bootcamps");
 // Require middleware
-const logger = require("./middleware/logger");
+const morgan = require("morgan");
 
 //load env files
 dotenv.config({ path: "./config/config.env" });
 const app = express();
 
-app.use(logger);
+if (process.env.NODE_ENV === "development") {
+  app.use(morgan("dev"));
+}
 
 //Mount routes
 app.use("/api/v1/bootcamps", bootcamp);

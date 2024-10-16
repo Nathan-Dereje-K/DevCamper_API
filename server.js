@@ -19,6 +19,9 @@ connectDB();
 // Create an Express application
 const app = express();
 
+// Body parser
+app.use(express.json());
+
 // Use Morgan for logging in development mode
 if (process.env.NODE_ENV === "development") {
   app.use(morgan("dev"));

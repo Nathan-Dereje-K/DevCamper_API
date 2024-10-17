@@ -7,8 +7,9 @@ const colors = require("colors");
 // Import routes
 const bootcampRoutes = require("./routes/bootcamps");
 
-// Import middleware to connect to the database
+// Import middleware
 const connectDB = require("./config/db");
+const errorHandler = require("./middleware/error");
 
 // Load environment variables from the config file
 dotenv.config({ path: "./config/config.env" });
@@ -29,6 +30,7 @@ if (process.env.NODE_ENV === "development") {
 
 // Mount routes
 app.use("/api/v1/bootcamps", bootcampRoutes);
+app.use(errorHandler);
 
 // Set up the port for the server
 const PORT = process.env.PORT || 5000;

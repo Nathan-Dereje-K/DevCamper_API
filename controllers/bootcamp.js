@@ -1,6 +1,7 @@
 // getBootcamps , getBootcamp , createBootcamp , updateBootcamp , deleteBootcamp
 const ErrorResponse = require("../ultils/errorResponse");
 // const asyncHandler = require("async-handler");
+const geocoder = require("../ultils/geocoder");
 const asyncHandler = require("../middleware/async");
 const Bootcamp = require("../models/Bootcamp");
 
@@ -76,5 +77,32 @@ exports.deleteBootcamp = asyncHandler(async (req, res, next) => {
   res.status(200).json({
     success: true,
     msg: `Bootcamp deleted successfully`,
+  });
+});
+
+// @Desc       Get Bootcamp with in radius
+// @Route      Get /api/v1/bootcamps/radius/:zipcode/distance
+// @Access     Private
+
+exports.getBootcampsInRadius = asyncHandler(async (req, res, next) => {
+  const { zipcode, distance } = req.params;
+  const loc = await geocoder.geocode(zipcode);
+
+  const lat = loc[0].latitude;
+  const lng = loc[0].longitude;
+
+  // Radius of the Earth in mile = 3,958 mi || in Killometer = 6,371 KM
+  const radius = distance / 3958;
+
+  const bootcamps = await Bootcamp.find({
+    location: {
+      $geoWithin: { $centerSphere: [[lng, lat], radius] },
+    },
+  });
+
+  res.status(201).json({
+    success: true,
+    count: bootcamps.length,
+    data: bootcamps,
   });
 });

@@ -3,9 +3,9 @@ const NodeGeocoder = require("node-geocoder");
 dotenv.config({ path: "./config/config.env" });
 // Set up the options with the correct provider and API key
 const options = {
-  provider: process.env.GEOCODER_PROVIDER, // Correct provider name in lowercase
+  provider: process.env.GEOCODER_PROVIDER,
   httpAdapter: "https",
-  apiKey: process.env.GEOCODER_API_KEY, // Hardcoded OpenCage API key
+  apiKey: process.env.GEOCODER_API_KEY,
   formatter: null,
 };
 

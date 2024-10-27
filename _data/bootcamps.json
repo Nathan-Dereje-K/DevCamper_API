@@ -1,0 +1,54 @@
+[
+  {
+    "name": "Jane Doe",
+    "description": "A passionate software developer with a focus on full-stack development.",
+    "website": "https://janedoe.dev",
+    "phone": "(789) 123-4567",
+    "email": "jane.doe@gmail.com",
+    "address": "5th Avenue 789, New York, NY 10019, USA",
+    "careers": ["Web Development", "Data Science"],
+    "housing": true,
+    "jobAssistancee": true,
+    "jobGuarantee": true,
+    "acceptGi": false
+  },
+  {
+    "name": "Mark Well",
+    "description": "A passionate software developer with a focus on full-stack development.",
+    "website": "https://markwell.dev",
+    "phone": "(789) 321-4567",
+    "email": "mark.doe@gmail.com",
+    "address": "Frauenplan 1, 99423 Weimar, Germany",
+    "careers": ["Web Development", "Data Science"],
+    "housing": true,
+    "jobAssistancee": true,
+    "jobGuarantee": true,
+    "acceptGi": false
+  },
+  {
+    "name": "Nate Zack",
+    "description": "A passionate software developer with a focus on full-stack development.",
+    "website": "https://natezack.dev",
+    "phone": "(789) 123-4567",
+    "email": "nate.doe@gmail.com",
+    "address": "Hauptstraße 42, 10117 Berlin, Germany",
+    "careers": ["Web Development", "Data Science"],
+    "housing": true,
+    "jobAssistancee": true,
+    "jobGuarantee": true,
+    "acceptGi": false
+  },
+  {
+    "name": "Beth Rose",
+    "description": "A passionate software developer with a focus on full-stack development.",
+    "website": "https://bethrose.dev",
+    "phone": "(789) 123-4567",
+    "email": "beth.doe@gmail.com",
+    "address": "Via Roma 12, 00186 Roma, Italia",
+    "careers": ["Web Development", "Data Science"],
+    "housing": true,
+    "jobAssistancee": true,
+    "jobGuarantee": true,
+    "acceptGi": false
+  }
+]

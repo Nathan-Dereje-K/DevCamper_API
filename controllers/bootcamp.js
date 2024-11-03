@@ -10,7 +10,7 @@ const Bootcamp = require("../models/Bootcamp");
 // @Access     Public
 
 exports.getBootcamps = asyncHandler(async (req, res, next) => {
-  const bootcamp = await Bootcamp.find();
+  const bootcamp = await Bootcamp.find(req.query);
   res
     .status(200)
     .json({ success: true, count: bootcamp.length, msg: { bootcamp } });

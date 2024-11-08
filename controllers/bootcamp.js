@@ -1,4 +1,4 @@
-// getBootcamps , getBootcamp , createBootcamp , updateBootcamp , deleteBootcamp
+// getBootcamps , getBootcamp , createBootcamp , updateBootcamp , deleteBootcamp, getBootcampsInRadius
 const ErrorResponse = require("../ultils/errorResponse");
 // const asyncHandler = require("async-handler");
 const geocoder = require("../ultils/geocoder");
@@ -19,7 +19,7 @@ exports.getBootcamps = asyncHandler(async (req, res, next) => {
     (match) => `$${match}`
   );
 
-  query = bootcamp.find(JSON.parse(queryStr));
+  query = Bootcamp.find(JSON.parse(queryStr));
 
   const bootcamp = await query;
   res

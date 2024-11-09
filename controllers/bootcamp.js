@@ -12,19 +12,41 @@ const Bootcamp = require("../models/Bootcamp");
 exports.getBootcamps = asyncHandler(async (req, res, next) => {
   let query;
 
-  let queryStr = JSON.stringify(req.query);
+  // Copy req.query into a new object to avoid mutating it
+  const reqQuery = { ...req.query };
 
+  // Words to remove from query
+  const removeWords = ["select"];
+
+  // Remove unwanted words from reqQuery
+  removeWords.forEach((word) => delete reqQuery[word]);
+
+  // Convert the modified reqQuery to a query string
+  let queryStr = JSON.stringify(reqQuery);
+
+  // Add MongoDB operators like $gt, $gte, etc.
   queryStr = queryStr.replace(
     /\b(gt|gte|lt|lte|in)\b/g,
     (match) => `$${match}`
   );
 
+  // Finding the resource with the parsed query
   query = Bootcamp.find(JSON.parse(queryStr));
 
+  // Select fields
+  if (req.query.select) {
+    const fields = req.query.select.split(",").join(" ");
+    console.log(fields);
+  }
+
+  // Execute the query
   const bootcamp = await query;
-  res
-    .status(200)
-    .json({ success: true, count: bootcamp.length, data: { bootcamp } });
+
+  res.status(200).json({
+    success: true,
+    count: bootcamp.length,
+    data: bootcamp,
+  });
 });
 
 // @Desc       get a specific Bootcamp

@@ -1,7 +1,7 @@
 // getBootcamps , getBootcamp , createBootcamp , updateBootcamp , deleteBootcamp, getBootcampsInRadius
-const ErrorResponse = require("../ultils/errorResponse");
+const ErrorResponse = require("../utils/errorResponse");
 // const asyncHandler = require("async-handler");
-const geocoder = require("../ultils/geocoder");
+const geocoder = require("../utils/geocoder");
 const asyncHandler = require("../middleware/async");
 const Bootcamp = require("../models/Bootcamp");
 
@@ -24,7 +24,7 @@ exports.getBootcamps = asyncHandler(async (req, res, next) => {
   const bootcamp = await query;
   res
     .status(200)
-    .json({ success: true, count: bootcamp.length, msg: { bootcamp } });
+    .json({ success: true, count: bootcamp.length, data: { bootcamp } });
 });
 
 // @Desc       get a specific Bootcamp
@@ -39,7 +39,7 @@ exports.getBootcamp = asyncHandler(async (req, res, next) => {
   }
   res.status(200).json({
     success: true,
-    msg: bootcamp,
+    data: bootcamp,
   });
 });
 

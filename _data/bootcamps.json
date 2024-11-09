@@ -10,7 +10,8 @@
     "housing": true,
     "jobAssistancee": true,
     "jobGuarantee": true,
-    "acceptGi": false
+    "acceptGi": false,
+    "averageCost": 10000
   },
   {
     "name": "Mark Well",
@@ -23,7 +24,8 @@
     "housing": true,
     "jobAssistancee": true,
     "jobGuarantee": true,
-    "acceptGi": false
+    "acceptGi": false,
+    "averageCost": 50
   },
   {
     "name": "Nate Zack",
@@ -36,7 +38,8 @@
     "housing": true,
     "jobAssistancee": true,
     "jobGuarantee": true,
-    "acceptGi": false
+    "acceptGi": false,
+    "averageCost": 9999
   },
   {
     "name": "Beth Rose",
@@ -49,6 +52,7 @@
     "housing": true,
     "jobAssistancee": true,
     "jobGuarantee": true,
-    "acceptGi": false
+    "acceptGi": false,
+    "averageCost": 5000
   }
 ]

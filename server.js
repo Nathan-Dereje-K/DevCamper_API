@@ -6,6 +6,7 @@ const colors = require("colors");
 
 // Import routes
 const bootcampRoutes = require("./routes/bootcamps");
+const courseRoutes = require("./routes/courses");
 
 // Import middleware
 const connectDB = require("./config/db");
@@ -30,6 +31,7 @@ if (process.env.NODE_ENV === "development") {
 
 // Mount routes
 app.use("/api/v1/bootcamps", bootcampRoutes);
+app.use("/api/v1/courses", courseRoutes);
 app.use(errorHandler);
 
 // Set up the port for the server

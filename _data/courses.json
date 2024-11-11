@@ -1,0 +1,42 @@
+[
+  {
+    "_id": "672f6fd1e6ef1d30f54d3e9f",
+    "title": "Advanced JS and React",
+    "description": "Best selling doc",
+    "weeks": 7,
+    "tuition": 49,
+    "minimumSkill": "beginner",
+    "scholarshipAvailable": true,
+    "bootcamp": "672f6fd1e6ef1d30f54d3e9f"
+  },
+  {
+    "_id": "672f6fd1e6ef1d30f54d3e9c",
+    "title": "Laravel",
+    "description": "Best selling doc",
+    "weeks": 7,
+    "tuition": 199,
+    "minimumSkill": "beginner",
+    "scholarshipAvailable": true,
+    "bootcamp": "672f6fd1e6ef1d30f54d3e9c"
+  },
+  {
+    "_id": "672f6fd1e6ef1d30f54d3e9d",
+    "title": "React",
+    "description": "Best selling doc",
+    "weeks": 7,
+    "tuition": 87,
+    "minimumSkill": "beginner",
+    "scholarshipAvailable": true,
+    "bootcamp": "672f6fd1e6ef1d30f54d3e9d"
+  },
+  {
+    "_id": "672f6fd1e6ef1d30f54d3e9e",
+    "title": "Angular",
+    "description": "Best selling doc",
+    "weeks": 7,
+    "tuition": 99,
+    "minimumSkill": "beginner",
+    "scholarshipAvailable": true,
+    "bootcamp": "672f6fd1e6ef1d30f54d3e9e"
+  }
+]

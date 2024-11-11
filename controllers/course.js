@@ -1,5 +1,5 @@
 // getCourses , getCourse , createCourse , updateCourse , deleteCourse
-const ErrorResponse = require("../middleware/error");
+const ErrorResponse = require("../utils/errorResponse");
 const asyncHandler = require("../middleware/async");
 const Course = require("../models/Course");
 
@@ -8,10 +8,16 @@ const Course = require("../models/Course");
 // @Access     Public
 
 exports.getCourses = asyncHandler(async (req, res, next) => {
-  const course = await Course.find();
+  let query;
+
+  if (req.params.bootcampId) {
+    query = Course.find({ bootcamp: req.params.bootcampId });
+  } else {
+    query = Course.find();
+  }
+  const course = await query;
   res.status(200).json({
     success: true,
-    count: course.length,
     data: course,
   });
 });
@@ -40,6 +46,7 @@ exports.createCourse = asyncHandler(async (req, res, next) => {
   const course = await Course.create(req.body);
   res.status(201).json({
     success: true,
+    msg: "Course created successfuly",
     data: { course },
   });
 });
@@ -75,6 +82,6 @@ exports.deleteCourse = asyncHandler(async (req, res, next) => {
   }
   res.status(200).json({
     success: true,
-    message: `Course with an id of ${id} deleted successfully`,
+    message: `Course with an id of ${id} is deleted successfully`,
   });
 });

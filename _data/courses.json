@@ -15,7 +15,7 @@
     "description": "Best selling doc",
     "weeks": 7,
     "tuition": 199,
-    "minimumSkill": "beginner",
+    "minimumSkill": "advanced",
     "scholarshipAvailable": true,
     "bootcamp": "672f6fd1e6ef1d30f54d3e9c"
   },
@@ -35,7 +35,7 @@
     "description": "Best selling doc",
     "weeks": 7,
     "tuition": 99,
-    "minimumSkill": "beginner",
+    "minimumSkill": "intermediate",
     "scholarshipAvailable": true,
     "bootcamp": "672f6fd1e6ef1d30f54d3e9e"
   }

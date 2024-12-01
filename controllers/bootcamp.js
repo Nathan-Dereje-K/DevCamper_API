@@ -1,6 +1,5 @@
 // getBootcamps , getBootcamp , createBootcamp , updateBootcamp , deleteBootcamp, getBootcampsInRadius
 const ErrorResponse = require("../utils/errorResponse");
-// const asyncHandler = require("async-handler");
 const geocoder = require("../utils/geocoder");
 const asyncHandler = require("../middleware/async");
 const Bootcamp = require("../models/Bootcamp");

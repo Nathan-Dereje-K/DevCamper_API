@@ -7,7 +7,7 @@
     "tuition": 49,
     "minimumSkill": "beginner",
     "scholarshipAvailable": true,
-    "bootcamp": "672f6fd1e6ef1d30f54d3e9f"
+    "bootcamp": "6734dbda220c237d2bdc0bbf"
   },
   {
     "_id": "672f6fd1e6ef1d30f54d3e9c",
@@ -17,7 +17,7 @@
     "tuition": 199,
     "minimumSkill": "advanced",
     "scholarshipAvailable": true,
-    "bootcamp": "672f6fd1e6ef1d30f54d3e9c"
+    "bootcamp": "6734dbda220c237d2bdc0bc1"
   },
   {
     "_id": "672f6fd1e6ef1d30f54d3e9d",
@@ -27,7 +27,7 @@
     "tuition": 87,
     "minimumSkill": "beginner",
     "scholarshipAvailable": true,
-    "bootcamp": "672f6fd1e6ef1d30f54d3e9d"
+    "bootcamp": "6734dbda220c237d2bdc0bc0"
   },
   {
     "_id": "672f6fd1e6ef1d30f54d3e9e",
@@ -37,6 +37,6 @@
     "tuition": 99,
     "minimumSkill": "intermediate",
     "scholarshipAvailable": true,
-    "bootcamp": "672f6fd1e6ef1d30f54d3e9e"
+    "bootcamp": "6734dbda220c237d2bdc0bbe"
   }
 ]

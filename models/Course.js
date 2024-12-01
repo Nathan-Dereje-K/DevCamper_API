@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 const slugify = require("slugify");
-const CourseSchema = mongoose.Schema({
+const CourseSchema = new mongoose.Schema({
   title: {
     type: String,
     required: [true, "Please add a title"],
@@ -34,7 +34,7 @@ const CourseSchema = mongoose.Schema({
     default: Date.now,
   },
   bootcamp: {
-    type: mongoose.Schema.ObjectId,
+    type: mongoose.Schema.Types.ObjectId,
     required: true,
     ref: "Bootcamp",
   },

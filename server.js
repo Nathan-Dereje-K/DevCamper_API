@@ -3,6 +3,7 @@ const express = require("express");
 const dotenv = require("dotenv");
 const morgan = require("morgan");
 const colors = require("colors");
+const cookieParser = require("cookie-parser");
 
 // Import routes
 const bootcampRoutes = require("./routes/bootcamps");
@@ -24,6 +25,8 @@ const app = express();
 
 // Body parser
 app.use(express.json());
+// Cookie Parser
+app.use(cookieParser());
 
 // Use Morgan for logging in development mode
 if (process.env.NODE_ENV === "development") {

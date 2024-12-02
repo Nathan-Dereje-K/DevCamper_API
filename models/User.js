@@ -48,4 +48,9 @@ UserSchema.methods.getSignedJwtToken = function () {
   });
 };
 
+// Compare the hased password with the plain passsword
+UserSchema.methods.comparePassword = async function (plainPassword) {
+  return await bcrypt.compare(plainPassword, this.password);
+};
+
 module.exports = mongoose.model("User", UserSchema);
